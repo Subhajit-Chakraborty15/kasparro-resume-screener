@@ -1,10 +1,10 @@
 ## Results snapshot
 
-![Ranked results](<img width="1595" height="728" alt="Screenshot 2026-10-07 155559" src="https://github.com/user-attachments/assets/138b031c-04a6-42a6-890d-b70db97e0d3f" />
+(<img width="1595" height="728" alt="Screenshot 2026-10-07 155559" src="https://github.com/user-attachments/assets/138b031c-04a6-42a6-890d-b70db97e0d3f" />
 )
-![Batch summary](<img width="1455" height="691" alt="Screenshot 2026-10-07 155524" src="https://github.com/user-attachments/assets/f52fc555-86ef-4ccd-8bfa-79653b833517" />
+(<img width="1455" height="691" alt="Screenshot 2026-10-07 155524" src="https://github.com/user-attachments/assets/f52fc555-86ef-4ccd-8bfa-79653b833517" />
 )
-![Tests passing](<img width="1322" height="455" alt="Screenshot 2026-10-07 155623" src="https://github.com/user-attachments/assets/b6d1ed83-54e3-4940-b201-9cff36fc7351" />
+(<img width="1322" height="455" alt="Screenshot 2026-10-07 155623" src="https://github.com/user-attachments/assets/b6d1ed83-54e3-4940-b201-9cff36fc7351" />
 )
 # AI Resume Screening & Ranking System
 
