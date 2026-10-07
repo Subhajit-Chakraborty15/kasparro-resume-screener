@@ -1,0 +1,10 @@
+Dev Patel
+dev.patel@example.com
+GitHub: dev-patel-llm
+
+Skills: Python, FastAPI, PostgreSQL, Docker, LangChain
+
+Projects
+Contract Analyzer - Python, LangChain, FAISS
+- Built a RAG pipeline for contract clauses using embeddings and FAISS, with a FastAPI API and evaluation of retrieval precision.
+- Implemented async document ingestion and error handling for malformed PDFs.
