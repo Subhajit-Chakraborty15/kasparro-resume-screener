@@ -1,8 +1,23 @@
+
 # AI Resume Screening & Ranking System
 
 Ingests a folder of resumes (PDF required, DOCX/TXT as a bonus), applies a rule-based
 Python + AI eligibility filter, scores eligible candidates on a 100 point rubric,
 enriches with public GitHub activity, and writes a ranked, explainable shortlist.
+
+## How it works
+
+```mermaid
+flowchart LR
+    A[resumes folder: PDF, DOCX, TXT] --> B[Ingestion and text extraction]
+    B --> C[Field extraction: name, email, skills, projects, GitHub]
+    C --> D{Hard eligibility filter: Python + AI evidence}
+    D -- rejected --> R[Rejected list with reasons]
+    D -- eligible --> E[100-point scoring: rules + optional LLM]
+    E --> F[GitHub enrichment: cached, bounded concurrency]
+    F --> G[Ranking]
+    G --> H[results.json, results.csv, results.html]
+```
 
 ## Project layout
 
@@ -33,7 +48,7 @@ kasparro-resume-screener/
 │   ├── pipeline.py              orchestration with bounded concurrency
 │   ├── report.py                JSON / CSV / HTML / terminal writers
 │   └── api.py                   FastAPI endpoints
-└── tests/                       71 tests (eligibility, scoring, GitHub, LLM, ingestion, pipeline, API)
+└── tests/                       75 tests (eligibility, scoring, GitHub, LLM, ingestion, names, pipeline, API)
 ```
 
 ## Setup
@@ -42,10 +57,10 @@ kasparro-resume-screener/
 python -m venv .venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-cp .env.example .env                 # optional: add keys (see below)
+cp .env.example .env                 # optional: add keys (see below). Windows: copy .env.example .env
 ```
 
-Python 3.10+ is required (developed on 3.12).
+Python 3.10+ is required (developed on 3.12, also tested on 3.13).
 
 ## Run
 
@@ -88,12 +103,25 @@ python -m pytest -q
 | Variable | Purpose |
 |---|---|
 | `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`, `LLM_PROVIDER`, `LLM_MODEL` | enables LLM project-quality judgement. Without a key the system runs deterministically |
+| `OPENAI_BASE_URL` | optional; points the `openai` provider at any OpenAI-compatible endpoint (for example Groq, see below) |
 | `GITHUB_TOKEN` | optional; raises the GitHub limit from 60 to 5000 requests/hour |
 | `LLM_CONCURRENCY`, `GITHUB_CONCURRENCY`, `PARSE_CONCURRENCY` | bounded concurrency |
 | `LLM_BLEND` | weight of the LLM score in the AI-depth category (default 0.5) |
 | `WEAK_AI_THRESHOLD`, `WEAK_AI_TOTAL_CAP` | ranking guard for profiles without a real AI project |
 
 Weights, penalties and AI sub-weights are dataclasses in `config.py`. Vocabulary lives in `catalog.py`.
+
+### Using a free LLM (Groq example)
+
+The `openai` provider works with any OpenAI-compatible endpoint, so no code change is needed:
+
+```
+LLM_PROVIDER=openai
+OPENAI_API_KEY=<your Groq key>
+OPENAI_BASE_URL=https://api.groq.com/openai/v1
+LLM_MODEL=openai/gpt-oss-20b
+LLM_CONCURRENCY=1
+```
 
 ## Output
 
@@ -109,6 +137,12 @@ Weights, penalties and AI sub-weights are dataclasses in `config.py`. Vocabulary
 
 Total score = sum of the five categories, minus penalties (max 20), floored at 0.
 
+### Results for the provided resume set
+
+50 resumes processed: 50 parsed, 0 failed, 0 duplicates, **37 eligible, 13 rejected**. GitHub enrichment
+ran for 34 candidates with 0 failures. The submitted `results.json` was generated in **deterministic mode**
+(`--no-llm`); see "LLM usage" below for why.
+
 ## Design Decisions
 
 **Filtering strategy.** Eligibility is purely rule-based and runs before any scoring or LLM call.
@@ -118,7 +152,9 @@ vector search, tool calling or an agentic term appears anywhere (the assignment 
 Deep-learning evidence (PyTorch, TensorFlow, Hugging Face, NLP/CV) counts only when used inside a project or role,
 not in a bare skills list. Classical ML alone (scikit-learn, pandas, Titanic-style projects) is rejected
 with its own reason. JavaScript, Java, React or Next.js never cause rejection by themselves. Rejections carry
-explicit reasons and the matched skills, as in the suggested format.
+explicit reasons and the matched skills, as in the suggested format. The filter is deliberately conservative:
+a project merely labelled "AI-powered", with no named model, framework or described retrieval/agent workflow,
+is not accepted as AI evidence.
 
 **Scoring strategy.** Fully deterministic baseline, 100 points: AI/agentic depth 40, Python and backend 30,
 cloud/deployment/full stack 15, GitHub 10, engineering depth 5.
@@ -139,6 +175,12 @@ The final AI score is `LLM_BLEND` x LLM + (1 - `LLM_BLEND`) x deterministic. One
 timeouts, provider errors and bad JSON fall back to deterministic scoring for that resume and are logged in
 `warnings`. Provider code is isolated in `_complete` of `AnthropicClient` / `OpenAIClient`.
 
+*What was submitted.* The submitted `results.json` was generated in deterministic mode. I verified the LLM path
+end-to-end on the sample resumes using a free Groq model (`openai/gpt-oss-20b`, 0 failures). On the full
+50-resume run, the free tier's rate limits made 29 of 37 calls fall back to deterministic scoring, which is the
+designed behaviour but gives a mixed ranking, so I submitted consistent rule-based scores for every candidate.
+Setting a key with higher limits enables the hybrid scoring with no code change.
+
 **GitHub scoring.** The username comes from the resume text and from PDF hyperlink annotations (anchor text often
 just says "GitHub"). Profile links are preferred over repo links; reserved paths are ignored. Score (max 10) =
 activity 0 to 5 (public events in the last 90 days tier + recency tier) + repositories 0 to 5 (maintained non-fork,
@@ -154,16 +196,20 @@ errors are contained. Parsing, LLM and GitHub work run with bounded concurrency 
 
 ## If I Had More Time
 
-1. Add OCR (for scanned PDFs) and layout-aware parsing for two-column resumes, which currently can interleave text.
-2. Build a labelled set of resumes and calibrate weights and thresholds, measuring ranking quality (for example NDCG)
-   instead of tuning by inspection; use LLM-based project extraction to replace the heuristic project chunking.
-3. Deepen GitHub signals: commit counts via the GraphQL API, README/test presence, and checking that listed projects
-   map to real repositories.
-4. Persist runs (SQLite) with diffable results and a small review UI for recruiters to override decisions.
+1. Run the LLM judge on the full set with a higher-limit key, and compare its ranking against the rule-based one
+   to measure where the two disagree.
+2. Add OCR (for scanned PDFs) and layout-aware parsing for two-column resumes, which currently can interleave text,
+   and make name extraction robust to headers where the name is split across lines or glued to the email.
+3. Add a "borderline" flag for resumes that claim an AI project without naming a model or framework, so a human can
+   review them, and build a labelled set to calibrate weights (for example with NDCG) instead of tuning by inspection.
+4. Deepen GitHub signals (commit counts via GraphQL, README/test presence) and retry GitHub calls without the token
+   when it is rejected with a 401, instead of failing the lookup.
 
 ## Known limitations
 
 * Project boundaries are detected heuristically; a resume with unusual formatting may merge projects.
 * Keyword vocabulary will miss unlisted frameworks; extend `catalog.py`.
+* Name extraction uses header heuristics with an email and filename fallback, so an unusual header can yield a
+  name derived from the email.
 * The deterministic mode cannot judge writing quality or truthfulness; the LLM mode is advisory and verified only
   by quote matching.
