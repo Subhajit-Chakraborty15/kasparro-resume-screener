@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+output/.github_cache.json
+resumes/*
+!resumes/.gitkeep
