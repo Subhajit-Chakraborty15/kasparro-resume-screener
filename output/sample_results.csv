@@ -1,0 +1,15 @@
+rank,candidate_name,eligible,total_score,ai_project_depth,python_backend,cloud_fullstack,github,engineering_depth,penalties,matched_skills,github_status,rejection_reasons,source_file
+1,Asha Rao,True,87,40,30,12,0,5,,Python; FastAPI; Async; PostgreSQL; Redis; Pytest; Docker; GCP; CI/CD; LangChain; LangGraph; LlamaIndex; RAG; Embeddings; Vector Search; Tool Calling; AI Agents; LLM Evaluation,,,asha_rao.pdf
+2,Karan Shah,True,65,31,17,15,0,2,,Python; FastAPI; Async; PostgreSQL; Docker; GCP; CI/CD; React; Next.js; JavaScript; TypeScript; Node.js; LangChain; RAG; Embeddings; Vector Search; Tool Calling,,,karan_shah_js_python_rag.pdf
+3,Tanvi Joshi,True,62,34,23,2,0,3,,Python; FastAPI; Async; Redis; Docker; LangGraph; Google ADK; LLM; Tool Calling; AI Agents,,,tanvi_joshi_cv_agents.pdf
+4,Maya Reddy,True,53,31,19,2,0,1,,Python; FastAPI; Async; PostgreSQL; Docker; LangGraph; LlamaIndex; RAG; Embeddings; Vector Search; Tool Calling,,,maya_reddy.docx
+5,Dev Patel,True,50,25,21,2,0,2,,Python; FastAPI; Async; PostgreSQL; Docker; LangChain; LLM; RAG; Embeddings; Vector Search,,,dev_patel.txt
+6,Zoya Khan,True,40,31,12,2,0,0,5,Python; FastAPI; Redis; Docker; LangGraph; Tool Calling; AI Agents,,,link_only_github.pdf
+7,Rohan Mehta,True,39,22,15,2,0,0,,Python; Flask; SQL; Docker; LangChain; OpenAI API; RAG; Embeddings; Vector Search,,,rohan_mehta.pdf
+8,Sneha Pillai,True,24,6,15,3,0,0,,Python; Flask; SQL; React; LangChain; LLM; RAG,,,sneha_pillai_skills_only.pdf
+9,Ishaan Verma,True,0,9,5,0,0,0,20,Python; OpenAI API; LLM; TensorFlow,,,ishaan_verma_tutorial.pdf
+10,Priya Nair,True,0,9,5,0,0,0,15,Python; Streamlit; OpenAI API,,,priya_nair_wrapper.pdf
+,Arjun Das,False,,,,,,,,MongoDB; Docker; React; Next.js; JavaScript; TypeScript; Node.js,,No evidence of Python stack; No AI/agentic project evidence,arjun_das_mern.pdf
+,Meera Krishnan,False,,,,,,,,Python; SQL; Pandas; NumPy; scikit-learn; Machine Learning,,Only classical ML/data-science evidence; no AI/LLM/agentic project evidence,meera_krishnan_ds.pdf
+,Neha Iyer,False,,,,,,,,MySQL; Docker; AWS; React; JavaScript; Java; Spring Boot,,No evidence of Python stack; No AI/agentic project evidence,neha_iyer_java.pdf
+,Vikram Singh,False,,,,,,,,Python; FastAPI; Django; Async; PostgreSQL; Redis; Celery; Pytest; Docker; AWS; CI/CD,,No AI/agentic project evidence,vikram_singh_backend_only.pdf

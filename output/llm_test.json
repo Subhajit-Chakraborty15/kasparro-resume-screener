@@ -1,0 +1,1145 @@
+{
+  "summary": {
+    "input_dir": "sample_resumes",
+    "total_files": 18,
+    "successfully_parsed": 15,
+    "eligible": 10,
+    "rejected": 4,
+    "failed_or_unreadable": 3,
+    "duplicates_skipped": 1,
+    "llm_used": true,
+    "llm_failures": 0,
+    "github_checked": 9,
+    "github_failures": 9,
+    "elapsed_seconds": 57.91,
+    "generated_at": "2026-10-07T09:28:54+00:00"
+  },
+  "ranked_candidates": [
+    {
+      "rank": 1,
+      "candidate_name": "Asha Rao",
+      "source_file": "asha_rao.pdf",
+      "email": "asha.rao@example.com",
+      "github_url": "https://github.com/asha-rao-dev",
+      "eligible": true,
+      "total_score": 85,
+      "score_breakdown": {
+        "ai_project_depth": 38,
+        "python_backend": 30,
+        "cloud_fullstack": 12,
+        "github": 0,
+        "engineering_depth": 5
+      },
+      "penalties": [],
+      "score_notes": [],
+      "scoring_mode": "hybrid",
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Async",
+        "PostgreSQL",
+        "Redis",
+        "Pytest",
+        "Docker",
+        "GCP",
+        "CI/CD",
+        "LangChain",
+        "LangGraph",
+        "LlamaIndex",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "Tool Calling",
+        "AI Agents",
+        "LLM Evaluation"
+      ],
+      "project_summary": "Asha built a stateful multi-agent ticket triage system with advanced retrieval and evaluation, plus a RAG-based document QA service, showcasing deep AI integration and backend engineering.",
+      "github_summary": "GitHub profile not found or private",
+      "github": {
+        "username": "asha-rao-dev",
+        "status": "not_found",
+        "error": "user not found",
+        "events_90d": 0,
+        "maintained_repos": 0,
+        "relevant_repos": 0,
+        "total_public_repos": 0,
+        "activity_score": 0,
+        "repo_score": 0,
+        "score": 0,
+        "summary": "GitHub profile not found or private"
+      },
+      "strengths": [
+        "Agent orchestration",
+        "Retrieval with embeddings",
+        "Evaluation harness",
+        "Agentic/orchestration workflow in 'Support Triage Agent'",
+        "Retrieval/RAG pipeline in 'Support Triage Agent'"
+      ],
+      "concerns": [
+        "Limited deployment details",
+        "No user studies",
+        "Scalability beyond 2k req/min not shown",
+        "GitHub enrichment unavailable (not_found)"
+      ],
+      "rejection_reasons": [],
+      "evidence": {
+        "python": [
+          "Python, FastAPI, asyncio, PostgreSQL, Redis, Docker, GCP, LangGraph, LangChain, pytest",
+          "Document QA Service | Python, LlamaIndex, FAISS",
+          "Developed Python microservices with FastAPI and PostgreSQL handling 2k requests per minute."
+        ],
+        "ai": [
+          "Support Triage Agent | LangGraph, FastAPI, PostgreSQL, Redis",
+          "Built a stateful multi-agent workflow with LangGraph that routes tickets, retrieves answers via RAG and calls",
+          "tools (function calling) to update the CRM."
+        ],
+        "ai_project_depth": [
+          "Best AI project 'Support Triage Agent': ['evaluation', 'orchestration', 'retrieval', 'tools'] -> 40/40",
+          "Second AI project 'Document QA Service' adds 25% of 26",
+          "Hybrid: LLM 35/40 x 0.50 + deterministic 40/40"
+        ],
+        "python_backend": [
+          "Python: 6.0/6 (used in projects/work)",
+          "Web framework: 6.0/6 (FastAPI=1.0, Flask/Django=0.0)",
+          "Async programming: 4.0/4",
+          "PostgreSQL/SQL: 4.0/4 (PostgreSQL=1.0, other DB=0.0)",
+          "Redis: 4.0/4",
+          "API/service design in projects: 3.0/3",
+          "Python/backend in internship or job: 3.0/3"
+        ],
+        "cloud_fullstack": [
+          "Cloud provider: 5.0/5 (GCP=1.0, AWS/Azure=0.0)",
+          "Docker: 4.0/4",
+          "Deployment/CI-CD: 3.0/3",
+          "Full stack: 0.0/3"
+        ],
+        "engineering_depth": [
+          "Signals: testing, architecture, caching, observability, concurrency, failure_handling"
+        ],
+        "github": [
+          "GitHub profile not found or private"
+        ],
+        "notes": []
+      },
+      "warnings": [
+        "GitHub enrichment not_found: user not found"
+      ]
+    },
+    {
+      "rank": 2,
+      "candidate_name": "Karan Shah",
+      "source_file": "karan_shah_js_python_rag.pdf",
+      "email": "karan.shah@example.com",
+      "github_url": "https://github.com/karan-shah-fs",
+      "eligible": true,
+      "total_score": 67,
+      "score_breakdown": {
+        "ai_project_depth": 33,
+        "python_backend": 17,
+        "cloud_fullstack": 15,
+        "github": 0,
+        "engineering_depth": 2
+      },
+      "penalties": [],
+      "score_notes": [],
+      "scoring_mode": "hybrid",
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Async",
+        "PostgreSQL",
+        "Docker",
+        "GCP",
+        "CI/CD",
+        "React",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "LangChain",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "Tool Calling"
+      ],
+      "project_summary": "Built an end-to-end research assistant using RAG, embeddings, and tool calling with evaluation metrics, deployed on GCP.",
+      "github_summary": "GitHub profile not found or private",
+      "github": {
+        "username": "karan-shah-fs",
+        "status": "not_found",
+        "error": "user not found",
+        "events_90d": 0,
+        "maintained_repos": 0,
+        "relevant_repos": 0,
+        "total_public_repos": 0,
+        "activity_score": 0,
+        "repo_score": 0,
+        "score": 0,
+        "summary": "GitHub profile not found or private"
+      },
+      "strengths": [
+        "RAG with embeddings",
+        "Tool calling",
+        "Evaluation metrics",
+        "Retrieval/RAG pipeline in 'Research Copilot'",
+        "Tool calling / structured outputs in 'Research Copilot'"
+      ],
+      "concerns": [
+        "Limited UI description",
+        "Single project scope",
+        "No Redis evidence",
+        "No testing evidence",
+        "GitHub enrichment unavailable (not_found)"
+      ],
+      "rejection_reasons": [],
+      "evidence": {
+        "python": [
+          "JavaScript, TypeScript, React, Next.js, Node.js, Python, FastAPI, PostgreSQL, Docker, GCP, LangChain"
+        ],
+        "ai": [
+          "Research Copilot | Next.js, FastAPI, LangChain, pgvector",
+          "Built an end-to-end research assistant: Next.js frontend, FastAPI backend, RAG over uploaded papers using",
+          "embeddings in pgvector and tool calling for web search."
+        ],
+        "ai_project_depth": [
+          "Best AI project 'Research Copilot': ['evaluation', 'retrieval', 'tools'] -> 31/40",
+          "Hybrid: LLM 35/40 x 0.50 + deterministic 31/40"
+        ],
+        "python_backend": [
+          "Python: 2.4/6 (skills list only)",
+          "Web framework: 6.0/6 (FastAPI=1.0, Flask/Django=0.0)",
+          "Async programming: 4.0/4",
+          "PostgreSQL/SQL: 1.6/4 (PostgreSQL=0.4, other DB=0.0)",
+          "Redis: 0.0/4",
+          "API/service design in projects: 3.0/3",
+          "Python/backend in internship or job: 0.0/3"
+        ],
+        "cloud_fullstack": [
+          "Cloud provider: 5.0/5 (GCP=1.0, AWS/Azure=0.0)",
+          "Docker: 4.0/4",
+          "Deployment/CI-CD: 3.0/3",
+          "Full stack: 3.0/3 (frontend + backend in the same project)"
+        ],
+        "engineering_depth": [
+          "Signals: caching, concurrency"
+        ],
+        "github": [
+          "GitHub profile not found or private"
+        ],
+        "notes": []
+      },
+      "warnings": [
+        "GitHub enrichment not_found: user not found"
+      ]
+    },
+    {
+      "rank": 3,
+      "candidate_name": "Tanvi Joshi",
+      "source_file": "tanvi_joshi_cv_agents.pdf",
+      "email": "tanvi.joshi@example.com",
+      "eligible": true,
+      "total_score": 62,
+      "score_breakdown": {
+        "ai_project_depth": 34,
+        "python_backend": 23,
+        "cloud_fullstack": 2,
+        "github": 0,
+        "engineering_depth": 3
+      },
+      "penalties": [],
+      "score_notes": [],
+      "scoring_mode": "hybrid",
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Async",
+        "Redis",
+        "Docker",
+        "LangGraph",
+        "Google ADK",
+        "LLM",
+        "Tool Calling",
+        "AI Agents"
+      ],
+      "project_summary": "Developed a multi-agent travel planner using Google ADK with tool‑calling agents, session state, and guardrails that reduced errors by 35%.",
+      "github_summary": "No GitHub profile on resume",
+      "github": {
+        "status": "not_provided",
+        "events_90d": 0,
+        "maintained_repos": 0,
+        "relevant_repos": 0,
+        "total_public_repos": 0,
+        "activity_score": 0,
+        "repo_score": 0,
+        "score": 0,
+        "summary": "No GitHub profile on resume"
+      },
+      "strengths": [
+        "Agent orchestration",
+        "Tool calling",
+        "State management",
+        "Agentic/orchestration workflow in 'Travel Planner Agent'",
+        "Tool calling / structured outputs in 'Travel Planner Agent'"
+      ],
+      "concerns": [
+        "Limited scalability description",
+        "No data pipeline detail",
+        "No UI description",
+        "No PostgreSQL evidence",
+        "No testing evidence",
+        "No GitHub profile found on resume"
+      ],
+      "rejection_reasons": [],
+      "evidence": {
+        "python": [
+          "Python, Google ADK, LangGraph, FastAPI, Docker, Redis",
+          "Travel Planner Agent | Google ADK, Python",
+          "Built Python FastAPI services around LLM agents with async calls and Redis caching."
+        ],
+        "ai": [
+          "Travel Planner Agent | Google ADK, Python",
+          "Developed a multi-agent travel planner with Google ADK where a planner agent delegates to flight and hotel",
+          "tool-calling agents and keeps session state."
+        ],
+        "ai_project_depth": [
+          "Best AI project 'Travel Planner Agent': ['evaluation', 'orchestration', 'tools'] -> 29/40",
+          "Second AI project 'AI Engineering Intern, Orbit AI' adds 25% of 20",
+          "Hybrid: LLM 35/40 x 0.50 + deterministic 34/40"
+        ],
+        "python_backend": [
+          "Python: 6.0/6 (used in projects/work)",
+          "Web framework: 6.0/6 (FastAPI=1.0, Flask/Django=0.0)",
+          "Async programming: 4.0/4",
+          "PostgreSQL/SQL: 0.0/4 (PostgreSQL=0.0, other DB=0.0)",
+          "Redis: 4.0/4",
+          "API/service design in projects: 0.0/3",
+          "Python/backend in internship or job: 3.0/3"
+        ],
+        "cloud_fullstack": [
+          "Cloud provider: 0.0/5 (GCP=0.0, AWS/Azure=0.0)",
+          "Docker: 1.6/4",
+          "Deployment/CI-CD: 0.0/3",
+          "Full stack: 0.0/3"
+        ],
+        "engineering_depth": [
+          "Signals: caching, concurrency, failure_handling"
+        ],
+        "github": [
+          "No GitHub profile on resume"
+        ],
+        "notes": []
+      },
+      "warnings": []
+    },
+    {
+      "rank": 4,
+      "candidate_name": "Maya Reddy",
+      "source_file": "maya_reddy.docx",
+      "email": "maya.reddy@example.com",
+      "github_url": "https://github.com/maya-reddy-ai",
+      "eligible": true,
+      "total_score": 55,
+      "score_breakdown": {
+        "ai_project_depth": 33,
+        "python_backend": 19,
+        "cloud_fullstack": 2,
+        "github": 0,
+        "engineering_depth": 1
+      },
+      "penalties": [],
+      "score_notes": [],
+      "scoring_mode": "hybrid",
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Async",
+        "PostgreSQL",
+        "Docker",
+        "LangGraph",
+        "LlamaIndex",
+        "RAG",
+        "Embeddings",
+        "Vector Search",
+        "Tool Calling"
+      ],
+      "project_summary": "Developed a retrieval-augmented generation service for clinical notes, integrating embeddings, vector search, and tool calls with an evaluation framework and async FastAPI backend.",
+      "github_summary": "GitHub profile not found or private",
+      "github": {
+        "username": "maya-reddy-ai",
+        "status": "not_found",
+        "error": "user not found",
+        "events_90d": 0,
+        "maintained_repos": 0,
+        "relevant_repos": 0,
+        "total_public_repos": 0,
+        "activity_score": 0,
+        "repo_score": 0,
+        "score": 0,
+        "summary": "GitHub profile not found or private"
+      },
+      "strengths": [
+        "RAG implementation",
+        "Tool calling",
+        "Evaluation framework",
+        "Retrieval/RAG pipeline in 'Clinical Notes Assistant'",
+        "Tool calling / structured outputs in 'Clinical Notes Assistant'"
+      ],
+      "concerns": [
+        "No Redis evidence",
+        "No testing evidence",
+        "GitHub enrichment unavailable (not_found)"
+      ],
+      "rejection_reasons": [],
+      "evidence": {
+        "python": [
+          "Python, FastAPI, PostgreSQL, Docker, LlamaIndex, LangGraph"
+        ],
+        "ai": [
+          "Clinical Notes Assistant | LlamaIndex, FastAPI",
+          "Built a RAG service with embeddings and vector search over clinical notes, with tool calling and an evaluation set; async FastAPI backend with PostgreSQL."
+        ],
+        "ai_project_depth": [
+          "Best AI project 'Clinical Notes Assistant': ['evaluation', 'retrieval', 'tools'] -> 31/40",
+          "Hybrid: LLM 35/40 x 0.50 + deterministic 31/40"
+        ],
+        "python_backend": [
+          "Python: 2.4/6 (skills list only)",
+          "Web framework: 6.0/6 (FastAPI=1.0, Flask/Django=0.0)",
+          "Async programming: 4.0/4",
+          "PostgreSQL/SQL: 4.0/4 (PostgreSQL=1.0, other DB=0.0)",
+          "Redis: 0.0/4",
+          "API/service design in projects: 3.0/3",
+          "Python/backend in internship or job: 0.0/3"
+        ],
+        "cloud_fullstack": [
+          "Cloud provider: 0.0/5 (GCP=0.0, AWS/Azure=0.0)",
+          "Docker: 1.6/4",
+          "Deployment/CI-CD: 0.0/3",
+          "Full stack: 0.0/3"
+        ],
+        "engineering_depth": [
+          "Signals: concurrency"
+        ],
+        "github": [
+          "GitHub profile not found or private"
+        ],
+        "notes": []
+      },
+      "warnings": [
+        "GitHub enrichment not_found: user not found"
+      ]
+    },
+    {
+      "rank": 5,
+      "candidate_name": "Dev Patel",
+      "source_file": "dev_patel.txt",
+      "email": "dev.patel@example.com",
+      "github_url": "https://github.com/dev-patel-llm",
+      "eligible": true,
+      "total_score": 55,
+      "score_breakdown": {
+        "ai_project_depth": 30,
+        "python_backend": 21,
+        "cloud_fullstack": 2,
+        "github": 0,
+        "engineering_depth": 2
+      },
+      "penalties": [],
+      "score_notes": [],
+      "scoring_mode": "hybrid",
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Async",
+        "PostgreSQL",
+        "Docker",
+        "LangChain",
+        "LLM",
+        "RAG",
+        "Embeddings",
+        "Vector Search"
+      ],
+      "project_summary": "A RAG pipeline for contract clause extraction with embeddings, FAISS vector search, FastAPI API, and retrieval precision evaluation.",
+      "github_summary": "GitHub profile not found or private",
+      "github": {
+        "username": "dev-patel-llm",
+        "status": "not_found",
+        "error": "user not found",
+        "events_90d": 0,
+        "maintained_repos": 0,
+        "relevant_repos": 0,
+        "total_public_repos": 0,
+        "activity_score": 0,
+        "repo_score": 0,
+        "score": 0,
+        "summary": "GitHub profile not found or private"
+      },
+      "strengths": [
+        "Retrieval implementation",
+        "Precision evaluation",
+        "Async ingestion",
+        "Retrieval/RAG pipeline in 'Contract Analyzer'",
+        "Evaluation of model output in 'Contract Analyzer'"
+      ],
+      "concerns": [
+        "No tool calling",
+        "Limited evaluation metrics",
+        "No Redis evidence",
+        "No testing evidence",
+        "GitHub enrichment unavailable (not_found)"
+      ],
+      "rejection_reasons": [],
+      "evidence": {
+        "python": [
+          "Skills: Python, FastAPI, PostgreSQL, Docker, LangChain",
+          "Contract Analyzer - Python, LangChain, FAISS"
+        ],
+        "ai": [
+          "Contract Analyzer - Python, LangChain, FAISS",
+          "Built a RAG pipeline for contract clauses using embeddings and FAISS, with a FastAPI API and evaluation of retrieval precision."
+        ],
+        "ai_project_depth": [
+          "Best AI project 'Contract Analyzer': ['evaluation', 'retrieval'] -> 25/40",
+          "Hybrid: LLM 35/40 x 0.50 + deterministic 25/40"
+        ],
+        "python_backend": [
+          "Python: 6.0/6 (used in projects/work)",
+          "Web framework: 6.0/6 (FastAPI=1.0, Flask/Django=0.0)",
+          "Async programming: 4.0/4",
+          "PostgreSQL/SQL: 1.6/4 (PostgreSQL=0.4, other DB=0.0)",
+          "Redis: 0.0/4",
+          "API/service design in projects: 3.0/3",
+          "Python/backend in internship or job: 0.0/3"
+        ],
+        "cloud_fullstack": [
+          "Cloud provider: 0.0/5 (GCP=0.0, AWS/Azure=0.0)",
+          "Docker: 1.6/4",
+          "Deployment/CI-CD: 0.0/3",
+          "Full stack: 0.0/3"
+        ],
+        "engineering_depth": [
+          "Signals: concurrency, failure_handling"
+        ],
+        "github": [
+          "GitHub profile not found or private"
+        ],
+        "notes": []
+      },
+      "warnings": [
+        "GitHub enrichment not_found: user not found"
+      ]
+    },
+    {
+      "rank": 6,
+      "candidate_name": "Zoya Khan",
+      "source_file": "link_only_github.pdf",
+      "email": "zoya.khan@example.com",
+      "github_url": "https://github.com/zoya-khan-agents",
+      "eligible": true,
+      "total_score": 42,
+      "score_breakdown": {
+        "ai_project_depth": 33,
+        "python_backend": 12,
+        "cloud_fullstack": 2,
+        "github": 0,
+        "engineering_depth": 0
+      },
+      "penalties": [
+        {
+          "reason": "Best AI project 'Agent Router' is described in fewer than 25 words (no implementation detail)",
+          "points": 5
+        }
+      ],
+      "score_notes": [
+        "Raw 47 minus penalties 5 = 42"
+      ],
+      "scoring_mode": "hybrid",
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Redis",
+        "Docker",
+        "LangGraph",
+        "Tool Calling",
+        "AI Agents"
+      ],
+      "project_summary": "Developed a stateful multi-agent router using LangGraph and FastAPI, incorporating tool calling and evaluation metrics with Redis.",
+      "github_summary": "GitHub profile not found or private",
+      "github": {
+        "username": "zoya-khan-agents",
+        "status": "not_found",
+        "error": "user not found",
+        "events_90d": 0,
+        "maintained_repos": 0,
+        "relevant_repos": 0,
+        "total_public_repos": 0,
+        "activity_score": 0,
+        "repo_score": 0,
+        "score": 0,
+        "summary": "GitHub profile not found or private"
+      },
+      "strengths": [
+        "Stateful agent orchestration",
+        "Tool calling",
+        "Evaluation metrics",
+        "Agentic/orchestration workflow in 'Agent Router'",
+        "Tool calling / structured outputs in 'Agent Router'"
+      ],
+      "concerns": [
+        "No retrieval or vector store",
+        "Limited evaluation detail",
+        "No mention of scaling",
+        "Best AI project 'Agent Router' is described in fewer than 25 words (no implementation detail)",
+        "No PostgreSQL evidence",
+        "No testing evidence"
+      ],
+      "rejection_reasons": [],
+      "evidence": {
+        "python": [
+          "Python, FastAPI, LangGraph, Docker"
+        ],
+        "ai": [
+          "Agent Router | LangGraph, FastAPI",
+          "Built a stateful multi-agent router with tool calling and evaluation metrics using FastAPI and Redis."
+        ],
+        "ai_project_depth": [
+          "Best AI project 'Agent Router': ['evaluation', 'orchestration', 'tools'] -> 31/40",
+          "Hybrid: LLM 35/40 x 0.50 + deterministic 31/40"
+        ],
+        "python_backend": [
+          "Python: 2.4/6 (skills list only)",
+          "Web framework: 6.0/6 (FastAPI=1.0, Flask/Django=0.0)",
+          "Async programming: 0.0/4",
+          "PostgreSQL/SQL: 0.0/4 (PostgreSQL=0.0, other DB=0.0)",
+          "Redis: 4.0/4",
+          "API/service design in projects: 0.0/3",
+          "Python/backend in internship or job: 0.0/3"
+        ],
+        "cloud_fullstack": [
+          "Cloud provider: 0.0/5 (GCP=0.0, AWS/Azure=0.0)",
+          "Docker: 1.6/4",
+          "Deployment/CI-CD: 0.0/3",
+          "Full stack: 0.0/3"
+        ],
+        "engineering_depth": [
+          "Signals: none"
+        ],
+        "github": [
+          "GitHub profile not found or private"
+        ],
+        "notes": []
+      },
+      "warnings": [
+        "GitHub enrichment not_found: user not found"
+      ]
+    },
+    {
+      "rank": 7,
+      "candidate_name": "Rohan Mehta",
+      "source_file": "rohan_mehta.pdf",
+      "email": "rohan.mehta@example.com",
+      "github_url": "https://github.com/rohan-mehta-ml",
+      "eligible": true,
+      "total_score": 38,
+      "score_breakdown": {
+        "ai_project_depth": 21,
+        "python_backend": 15,
+        "cloud_fullstack": 2,
+        "github": 0,
+        "engineering_depth": 0
+      },
+      "penalties": [],
+      "score_notes": [],
+      "scoring_mode": "hybrid",
+      "matched_skills": [
+        "Python",
+        "Flask",
+        "SQL",
+        "Docker",
+        "LangChain",
+        "OpenAI API",
+        "RAG",
+        "Embeddings",
+        "Vector Search"
+      ],
+      "project_summary": "Developed a RAG PDF chatbot leveraging LangChain and ChromaDB, and built a Flask API for expense tracking.",
+      "github_summary": "GitHub profile not found or private",
+      "github": {
+        "username": "rohan-mehta-ml",
+        "status": "not_found",
+        "error": "user not found",
+        "events_90d": 0,
+        "maintained_repos": 0,
+        "relevant_repos": 0,
+        "total_public_repos": 0,
+        "activity_score": 0,
+        "repo_score": 0,
+        "score": 0,
+        "summary": "GitHub profile not found or private"
+      },
+      "strengths": [
+        "RAG implementation",
+        "ChromaDB embeddings",
+        "Evaluation script",
+        "Retrieval/RAG pipeline in 'PDF Chat Assistant'",
+        "Evaluation of model output in 'PDF Chat Assistant'"
+      ],
+      "concerns": [
+        "Limited evaluation scale",
+        "No tool calling",
+        "No Redis evidence",
+        "No PostgreSQL evidence",
+        "No testing evidence",
+        "GitHub enrichment unavailable (not_found)"
+      ],
+      "rejection_reasons": [],
+      "evidence": {
+        "python": [
+          "Python, Flask, SQL, Docker, LangChain, OpenAI",
+          "PDF Chat Assistant | Python, LangChain, Chroma"
+        ],
+        "ai": [
+          "PDF Chat Assistant | Python, LangChain, Chroma",
+          "Built a RAG application that chunks PDFs, creates embeddings stored in ChromaDB and answers questions with",
+          "OpenAI models."
+        ],
+        "ai_project_depth": [
+          "Best AI project 'PDF Chat Assistant': ['evaluation', 'retrieval'] -> 22/40",
+          "Hybrid: LLM 20/40 x 0.50 + deterministic 22/40"
+        ],
+        "python_backend": [
+          "Python: 6.0/6 (used in projects/work)",
+          "Web framework: 4.0/6 (FastAPI=0.0, Flask/Django=1.0)",
+          "Async programming: 0.0/4",
+          "PostgreSQL/SQL: 2.0/4 (PostgreSQL=0.0, other DB=1.0)",
+          "Redis: 0.0/4",
+          "API/service design in projects: 3.0/3",
+          "Python/backend in internship or job: 0.0/3"
+        ],
+        "cloud_fullstack": [
+          "Cloud provider: 0.0/5 (GCP=0.0, AWS/Azure=0.0)",
+          "Docker: 1.6/4",
+          "Deployment/CI-CD: 0.0/3",
+          "Full stack: 0.0/3"
+        ],
+        "engineering_depth": [
+          "Signals: none"
+        ],
+        "github": [
+          "GitHub profile not found or private"
+        ],
+        "notes": []
+      },
+      "warnings": [
+        "GitHub enrichment not_found: user not found"
+      ]
+    },
+    {
+      "rank": 8,
+      "candidate_name": "Sneha Pillai",
+      "source_file": "sneha_pillai_skills_only.pdf",
+      "email": "sneha.pillai@example.com",
+      "github_url": "https://github.com/sneha-pillai-dev",
+      "eligible": true,
+      "total_score": 21,
+      "score_breakdown": {
+        "ai_project_depth": 3,
+        "python_backend": 15,
+        "cloud_fullstack": 3,
+        "github": 0,
+        "engineering_depth": 0
+      },
+      "penalties": [],
+      "score_notes": [],
+      "scoring_mode": "hybrid",
+      "matched_skills": [
+        "Python",
+        "Flask",
+        "SQL",
+        "React",
+        "LangChain",
+        "LLM",
+        "RAG"
+      ],
+      "project_summary": "No AI projects identified.",
+      "github_summary": "GitHub profile not found or private",
+      "github": {
+        "username": "sneha-pillai-dev",
+        "status": "not_found",
+        "error": "user not found",
+        "events_90d": 0,
+        "maintained_repos": 0,
+        "relevant_repos": 0,
+        "total_public_repos": 0,
+        "activity_score": 0,
+        "repo_score": 0,
+        "score": 0,
+        "summary": "GitHub profile not found or private"
+      },
+      "strengths": [],
+      "concerns": [
+        "AI skills listed but no project-level AI evidence",
+        "No Redis evidence",
+        "No PostgreSQL evidence",
+        "No Docker evidence",
+        "No testing evidence",
+        "GitHub enrichment unavailable (not_found)"
+      ],
+      "rejection_reasons": [],
+      "evidence": {
+        "python": [
+          "Python, Flask, LangChain, RAG, LLM, SQL, React",
+          "Library Management System | Python, Flask, SQLite"
+        ],
+        "ai": [
+          "Python, Flask, LangChain, RAG, LLM, SQL, React"
+        ],
+        "ai_project_depth": [
+          "AI terms appear only outside project/experience text (3 terms) -> capped at 6",
+          "Hybrid: LLM 0/40 x 0.50 + deterministic 6/40"
+        ],
+        "python_backend": [
+          "Python: 6.0/6 (used in projects/work)",
+          "Web framework: 4.0/6 (FastAPI=0.0, Flask/Django=1.0)",
+          "Async programming: 0.0/4",
+          "PostgreSQL/SQL: 2.0/4 (PostgreSQL=0.0, other DB=1.0)",
+          "Redis: 0.0/4",
+          "API/service design in projects: 3.0/3",
+          "Python/backend in internship or job: 0.0/3"
+        ],
+        "cloud_fullstack": [
+          "Cloud provider: 0.0/5 (GCP=0.0, AWS/Azure=0.0)",
+          "Docker: 0.0/4",
+          "Deployment/CI-CD: 0.0/3",
+          "Full stack: 3.0/3 (frontend + backend in the same project)"
+        ],
+        "engineering_depth": [
+          "Signals: none"
+        ],
+        "github": [
+          "GitHub profile not found or private"
+        ],
+        "notes": []
+      },
+      "warnings": [
+        "GitHub enrichment not_found: user not found"
+      ]
+    },
+    {
+      "rank": 9,
+      "candidate_name": "Priya Nair",
+      "source_file": "priya_nair_wrapper.pdf",
+      "email": "priya.nair@example.com",
+      "github_url": "https://github.com/priya-nair-codes",
+      "eligible": true,
+      "total_score": 0,
+      "score_breakdown": {
+        "ai_project_depth": 10,
+        "python_backend": 5,
+        "cloud_fullstack": 0,
+        "github": 0,
+        "engineering_depth": 0
+      },
+      "penalties": [
+        {
+          "reason": "Best AI project 'AI Chatbot' looks like a thin LLM/API wrapper (no orchestration, retrieval, tool use, evaluation or real backend logic)",
+          "points": 15
+        }
+      ],
+      "score_notes": [
+        "Raw 15 minus penalties 15 = 0"
+      ],
+      "scoring_mode": "hybrid",
+      "matched_skills": [
+        "Python",
+        "Streamlit",
+        "OpenAI API"
+      ],
+      "project_summary": "AI Chatbot using OpenAI API and Streamlit as a chat UI.",
+      "github_summary": "GitHub profile not found or private",
+      "github": {
+        "username": "priya-nair-codes",
+        "status": "not_found",
+        "error": "user not found",
+        "events_90d": 0,
+        "maintained_repos": 0,
+        "relevant_repos": 0,
+        "total_public_repos": 0,
+        "activity_score": 0,
+        "repo_score": 0,
+        "score": 0,
+        "summary": "GitHub profile not found or private"
+      },
+      "strengths": [
+        "Uses OpenAI API",
+        "Simple UI"
+      ],
+      "concerns": [
+        "No retrieval",
+        "No evaluation",
+        "No backend logic",
+        "Best AI project 'AI Chatbot' looks like a thin LLM/API wrapper (no orchestration, retrieval, tool use, evaluation or real backend logic)",
+        "No Redis evidence",
+        "No PostgreSQL evidence"
+      ],
+      "rejection_reasons": [],
+      "evidence": {
+        "python": [
+          "Python, Streamlit, OpenAI API, HTML, CSS"
+        ],
+        "ai": [
+          "Made a chatbot using OpenAI API and Streamlit."
+        ],
+        "ai_project_depth": [
+          "Best AI project 'AI Chatbot': ['no depth features'] -> 9/40",
+          "Hybrid: LLM 10/40 x 0.50 + deterministic 9/40"
+        ],
+        "python_backend": [
+          "Python: 2.4/6 (skills list only)",
+          "Web framework: 0.0/6 (FastAPI=0.0, Flask/Django=0.0)",
+          "Async programming: 0.0/4",
+          "PostgreSQL/SQL: 0.0/4 (PostgreSQL=0.0, other DB=0.0)",
+          "Redis: 0.0/4",
+          "API/service design in projects: 3.0/3",
+          "Python/backend in internship or job: 0.0/3"
+        ],
+        "cloud_fullstack": [
+          "Cloud provider: 0.0/5 (GCP=0.0, AWS/Azure=0.0)",
+          "Docker: 0.0/4",
+          "Deployment/CI-CD: 0.0/3",
+          "Full stack: 0.0/3"
+        ],
+        "engineering_depth": [
+          "Signals: none"
+        ],
+        "github": [
+          "GitHub profile not found or private"
+        ],
+        "notes": []
+      },
+      "warnings": [
+        "GitHub enrichment not_found: user not found"
+      ]
+    },
+    {
+      "rank": 10,
+      "candidate_name": "Ishaan Verma",
+      "source_file": "ishaan_verma_tutorial.pdf",
+      "email": "ishaan.verma@example.com",
+      "github_url": "https://github.com/ishaan-verma-ai",
+      "eligible": true,
+      "total_score": 0,
+      "score_breakdown": {
+        "ai_project_depth": 4,
+        "python_backend": 5,
+        "cloud_fullstack": 0,
+        "github": 0,
+        "engineering_depth": 0
+      },
+      "penalties": [
+        {
+          "reason": "Best AI project 'LLM Chatbot' looks like a thin LLM/API wrapper (no orchestration, retrieval, tool use, evaluation or real backend logic)",
+          "points": 15
+        },
+        {
+          "reason": "Best AI project 'LLM Chatbot' is tutorial-style",
+          "points": 5
+        }
+      ],
+      "score_notes": [
+        "Raw 9 minus penalties 20 = 0"
+      ],
+      "scoring_mode": "hybrid",
+      "matched_skills": [
+        "Python",
+        "OpenAI API",
+        "LLM",
+        "TensorFlow"
+      ],
+      "project_summary": "Single AI project: a basic LLM chatbot built following a Udemy tutorial.",
+      "github_summary": "GitHub profile not found or private",
+      "github": {
+        "username": "ishaan-verma-ai",
+        "status": "not_found",
+        "error": "user not found",
+        "events_90d": 0,
+        "maintained_repos": 0,
+        "relevant_repos": 0,
+        "total_public_repos": 0,
+        "activity_score": 0,
+        "repo_score": 0,
+        "score": 0,
+        "summary": "GitHub profile not found or private"
+      },
+      "strengths": [
+        "Python",
+        "OpenAI API"
+      ],
+      "concerns": [
+        "No depth",
+        "Limited architecture",
+        "Best AI project 'LLM Chatbot' looks like a thin LLM/API wrapper (no orchestration, retrieval, tool use, evaluation or real backend logic)",
+        "Best AI project 'LLM Chatbot' is tutorial-style",
+        "No Redis evidence",
+        "No PostgreSQL evidence"
+      ],
+      "rejection_reasons": [],
+      "evidence": {
+        "python": [
+          "Python, TensorFlow, OpenAI"
+        ],
+        "ai": [
+          "LLM Chatbot (Udemy tutorial)",
+          "Followed a Udemy tutorial to build a chatbot with the OpenAI API."
+        ],
+        "ai_project_depth": [
+          "Best AI project 'LLM Chatbot': ['no depth features'] -> 9/40",
+          "Hybrid: LLM 0/40 x 0.50 + deterministic 9/40"
+        ],
+        "python_backend": [
+          "Python: 2.4/6 (skills list only)",
+          "Web framework: 0.0/6 (FastAPI=0.0, Flask/Django=0.0)",
+          "Async programming: 0.0/4",
+          "PostgreSQL/SQL: 0.0/4 (PostgreSQL=0.0, other DB=0.0)",
+          "Redis: 0.0/4",
+          "API/service design in projects: 3.0/3",
+          "Python/backend in internship or job: 0.0/3"
+        ],
+        "cloud_fullstack": [
+          "Cloud provider: 0.0/5 (GCP=0.0, AWS/Azure=0.0)",
+          "Docker: 0.0/4",
+          "Deployment/CI-CD: 0.0/3",
+          "Full stack: 0.0/3"
+        ],
+        "engineering_depth": [
+          "Signals: none"
+        ],
+        "github": [
+          "GitHub profile not found or private"
+        ],
+        "notes": []
+      },
+      "warnings": [
+        "GitHub enrichment not_found: user not found"
+      ]
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "Arjun Das",
+      "source_file": "arjun_das_mern.pdf",
+      "eligible": false,
+      "rejection_reasons": [
+        "No evidence of Python stack",
+        "No AI/agentic project evidence"
+      ],
+      "matched_skills": [
+        "MongoDB",
+        "Docker",
+        "React",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "Node.js"
+      ],
+      "evidence_found": {
+        "python": [],
+        "ai": []
+      }
+    },
+    {
+      "candidate": "Meera Krishnan",
+      "source_file": "meera_krishnan_ds.pdf",
+      "eligible": false,
+      "rejection_reasons": [
+        "Only classical ML/data-science evidence; no AI/LLM/agentic project evidence"
+      ],
+      "matched_skills": [
+        "Python",
+        "SQL",
+        "Pandas",
+        "NumPy",
+        "scikit-learn",
+        "Machine Learning"
+      ],
+      "evidence_found": {
+        "python": [
+          "Python, Pandas, NumPy, scikit-learn, SQL, Tableau",
+          "Titanic Survival Prediction | Python, scikit-learn"
+        ],
+        "ai": []
+      }
+    },
+    {
+      "candidate": "Neha Iyer",
+      "source_file": "neha_iyer_java.pdf",
+      "eligible": false,
+      "rejection_reasons": [
+        "No evidence of Python stack",
+        "No AI/agentic project evidence"
+      ],
+      "matched_skills": [
+        "MySQL",
+        "Docker",
+        "AWS",
+        "React",
+        "JavaScript",
+        "Java",
+        "Spring Boot"
+      ],
+      "evidence_found": {
+        "python": [],
+        "ai": []
+      }
+    },
+    {
+      "candidate": "Vikram Singh",
+      "source_file": "vikram_singh_backend_only.pdf",
+      "eligible": false,
+      "rejection_reasons": [
+        "No AI/agentic project evidence"
+      ],
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "Django",
+        "Async",
+        "PostgreSQL",
+        "Redis",
+        "Celery",
+        "Pytest",
+        "Docker",
+        "AWS",
+        "CI/CD"
+      ],
+      "evidence_found": {
+        "python": [
+          "Python, Django, FastAPI, PostgreSQL, Redis, Celery, Docker, AWS, pytest",
+          "Built Python services with FastAPI and async workers."
+        ],
+        "ai": []
+      }
+    }
+  ],
+  "failed_resumes": [
+    {
+      "source_file": "corrupt.pdf",
+      "error": "Unreadable PDF: PdfStreamError: Stream has ended unexpectedly"
+    },
+    {
+      "source_file": "empty.pdf",
+      "error": "File is empty (0 bytes)"
+    },
+    {
+      "source_file": "notes.xlsx",
+      "error": "Unsupported file type '.xlsx'"
+    }
+  ],
+  "duplicate_resumes": [
+    {
+      "source_file": "asha_rao_copy.pdf",
+      "duplicate_of": "asha_rao.pdf",
+      "reason": "identical file contents"
+    }
+  ]
+}
